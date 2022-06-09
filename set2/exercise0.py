@@ -17,9 +17,6 @@ obvious answer, that's because it is!
 """
 
 
-from curses.ascii import isupper
-from sre_constants import AT_END_STRING
-from string import ascii_uppercase
 
 
 def add_1(a_number):
@@ -71,7 +68,7 @@ def shout(a_string):
           they all do different things. You'll need to actually read the
           docs to find out which one you actually need.
     """
-    the_answer = a_string.uppercase()
+    the_answer = a_string.upper()
     return the_answer
 
 
@@ -84,7 +81,7 @@ def really_shout(a_string):
     that you've reused the function you already wrote.
     Look up how to 'concatinate' strings to make this happen.
     """
-    the_answer = a_string.uppercase() 
+    the_answer = a_string.upper() + "!"
     return the_answer
 
 
