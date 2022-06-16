@@ -2,6 +2,11 @@
 """Modify each function until the tests pass."""
 
 
+from shutil import move
+
+from numpy import true_divide
+
+
 def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
 
@@ -13,7 +18,11 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
+    remainder = a_number % 2
+    if remainder == 1:
+        return True
+    else:
+        return False
 
 
 def fix_it(moves=True, should_move=True):
@@ -31,7 +40,19 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves == True:
+        if should_move == True:
+            return "No Problem"
+        else:
+            return "Duct Tape"
+    else:
+        if should_move == True:
+            return "WD-40"
+        else:
+            return "No Problem"
+
+
+    
 
 
 def loops_preview():
@@ -54,7 +75,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list =[]
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -67,8 +91,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
-
+    hash_tag =[]
+    for i in range(number_of_items):
+        hash_tag.append(symbol)
+    return hash_tag
 
 def loops_2():
     """Make a big square starfield.
@@ -88,6 +114,8 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
+    starfield =[]
+    
     return None
 
 
