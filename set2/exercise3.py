@@ -115,8 +115,12 @@ def loops_2():
           ]
     """
     starfield =[]
-    
-    return None
+    starline= []
+    for i in range (10):
+        starline.append("*")
+    for i in range(10):
+        starfield.append(starline)
+    return starfield
 
 
 def loops_3():
@@ -140,7 +144,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    outer_list=[]
+    for i in range (10):
+        inner_list=[]
+    for x in range (i):
+        outer_list.append(inner_list)
+    return outer_list
+
 
 
 def loops_4():

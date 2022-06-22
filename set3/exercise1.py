@@ -5,7 +5,7 @@ Modify each function until the tests pass.
 """
 
 
-def loop_ranger(start, stop=None, step=1):
+def loop_ranger(start=3, stop=10, step=2):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
@@ -17,7 +17,10 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    range_me =[]
+    for i in range (start, stop, step):
+        range_me.append(i)
+    return range_me 
 
 
 def two_step_ranger(start, stop):
@@ -28,7 +31,7 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    
 
 
 def stubborn_asker(low, high):
