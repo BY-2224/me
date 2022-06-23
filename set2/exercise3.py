@@ -4,7 +4,8 @@
 
 from shutil import move
 
-from numpy import true_divide
+from numpy import full, true_divide
+import py
 
 
 def is_odd(a_number):
@@ -145,11 +146,19 @@ def loops_3():
          so call str(number) to cast.
     """
     outer_list=[]
-    for i in range (10):
+    for i in range(10):
         inner_list=[]
-    for x in range (i):
+        inner_list.clear
+        for j in range(10):
+            inner_list.append(str(i))
         outer_list.append(inner_list)
     return outer_list
+     
+
+    
+
+
+
 
 
 
@@ -170,7 +179,20 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    outer_list=[]
+    for i in range(10):
+        inner_list=[]
+        inner_list.clear
+        for j in range(10):
+            inner_list.append(str(j))
+        outer_list.append(inner_list)
+    return outer_list
+       
+
+
+
+    
+
 
 
 def loops_5():
@@ -200,7 +222,22 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    full_list = []
+
+    for j in range(10):
+        
+        row=[]
+        
+        for i in range(5):
+            
+            row.append(f"(i{j}, j{i})")
+        
+        full_list.append(row)
+    
+    return full_list
+    
+
+
 
 
 def loops_6():
@@ -223,7 +260,20 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    
+    full_list = []
+
+    for i in range(10):
+
+        row = []
+
+        for j in range(i + 1):
+
+            row.append(str(j))
+
+        full_list.append(row)
+
+    return full_list
 
 
 def loops_7():
@@ -247,8 +297,34 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
 
+    space_number = 4
+    star_number = 1
+
+    pyramid = []
+
+    for x in range(5):
+
+        row = []
+
+        for y in range(9):
+
+            if y < space_number or y >= space_number + star_number:
+
+                row.append(" ")
+
+            else:
+
+                row.append("*")
+
+        pyramid.append(row)
+
+        space_number -= 1
+        star_number += 2
+
+    return pyramid
+
+    
 
 def little_printer(some_kind_of_list, exercise_name):
     """Help to see what's going on.
