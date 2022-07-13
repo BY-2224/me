@@ -29,7 +29,7 @@ def advancedGuessingGame():
     purpose if you can!
     """
     print("\nWelcome to the guessing game!")
-    print("A number between 0 and 10 ?")
+    print("A number between 0 and _ ?")
     upperBound = input("Enter an upper bound: ")
     print(f"OK then, a number between 0 and {upperBound} ?")
     upperBound = int(upperBound)
