@@ -3,6 +3,7 @@
 
 import json
 import os
+from matplotlib.pyplot import title
 import requests
 import inspect
 import sys
@@ -38,10 +39,20 @@ def get_some_details():
          dictionaries.
     """
     json_data = open(LOCAL + "/lazyduck.json").read()
-
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    
+    last_name=data["results"][0]["name"]["last"]
+    
+    password_expose=data["results"][0]["login"]["password"]
+    
+    postcode=data["results"][0]["location"]["postcode"]
 
+
+    
+    
+    data = json.loads(json_data)
+    return {"lastName": last_name, "password": password_expose, "postcodePlusID": postcode}
+    
 
 def wordy_pyramid():
     """Make a pyramid out of real words.
@@ -78,6 +89,10 @@ def wordy_pyramid():
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
     pyramid = []
+    wordlength=3
+    wordlengthmax=20
+
+
 
     return pyramid
 

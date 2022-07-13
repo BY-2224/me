@@ -5,7 +5,7 @@ Modify each function until the tests pass.
 """
 
 
-def loop_ranger(start=3, stop=10, step=2):
+def loop_ranger(start, stop, step):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
@@ -18,6 +18,11 @@ def loop_ranger(start=3, stop=10, step=2):
     with just the range function, but we'd like you to do it the long way.
     """
     range_me =[]
+
+    start=3
+    stop=10
+    step=2
+   
     for i in range (start, stop, step):
         range_me.append(i)
     return range_me 
@@ -31,7 +36,18 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
+    number_list=range(start, stop, 2)
     
+    range_o=[]
+    
+    for x in number_list:
+        
+        range_o.append(x)
+    
+    return range_o
+    
+    
+
 
 
 def stubborn_asker(low, high):
@@ -42,7 +58,15 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+    message = "Give me a number between {low}, and {high}:".format(low=low,high=high)
+
+    input_message = int(input(message))
+    if low < input_message < high:
+        print("Champion {}".format(input_message))
+    else:
+        print("{input} isn't between {low}, and {high}:".format(input=input_message, low=low, high=high))
+
+
 
 
 def not_number_rejector(message):
@@ -52,7 +76,18 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    message = 9
+
+    while True:
+        input_number = int(input(message))
+        print("Thanks mate {} ").format(input_number)
+        return input_number
+    else:
+        print("try again({})".format(e))
+    
+
+
+
 
 
 def super_asker(low, high):
