@@ -84,7 +84,7 @@ def not_number_rejector(message):
 
         try:
             input_number = int(input(message))
-            print("Thanks mate {}".format(str(input_number)))
+            print(f"Thanks mate {input_number}")
             return input_number
 
         except:

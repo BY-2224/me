@@ -41,7 +41,7 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
     
     data = json.loads(json_data)
-    last_name=data["results"][0]["name"]["last"]
+    last_name=data["results"][0]["name"][0]["last"]
     
     password_expose=data["results"][0]["login"]["password"]
     
